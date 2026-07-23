@@ -1,0 +1,16 @@
+<%- layout("layout.ejs") %>
+<body>
+    <div><%= msg %></div>
+    <div><%- msg %></div>
+    <% if(num > 0) { %>
+        <p>The given number is positive.</p>
+    <% } else if(num == 0) { %>
+        <p>The given number is zero.</p>
+    <% } else { %>
+        <p>The given number is negative.</p>
+    <% } %>
+
+    <% for(let i=1; i<=num; i++) { %>
+        <span> <%= i %> &nbsp;&nbsp; </span>
+    <% } %>
+</body>

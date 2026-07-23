@@ -2,12 +2,22 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            text-shadow: 2px 1px 0.4px black;
+        }
+    </style>
+
 </head>
 
 <body>
+    
+    <form method="post" action="http://localhost:3000/image" enctype="multipart/form-data">
+        <input type="file" name="nature">
+        <button>submit</button>
+    </form>
 
-
-<script src="index.js"></script>
 </body>
 
 </html>
