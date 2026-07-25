@@ -46,7 +46,7 @@ app.set("views", path.join(__dirname, "/views"));
 
 async function connect() {
   await mongoose.connect(
-    "mongodb+srv://anshumanjha4181:cRFRA2wrFUhuYevb@practicecluster.f8cvn.mongodb.net/?appName=practiceCluster",
+    process.env.MONGODB_URI
   );
 }
 
