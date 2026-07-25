@@ -35,6 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(flash());
 
 passport.use(new LocalStrategy(User.authenticate()));
@@ -46,7 +47,7 @@ app.set("views", path.join(__dirname, "/views"));
 
 async function connect() {
   await mongoose.connect(
-    "mongodb+srv://anshumanjha4181:cRFRA2wrFUhuYevb@practicecluster.f8cvn.mongodb.net/?appName=practiceCluster",
+    process.env.MONGODB_URI
   );
 }
 
